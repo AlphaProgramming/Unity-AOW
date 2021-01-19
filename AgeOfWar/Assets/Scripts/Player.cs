@@ -24,7 +24,6 @@ public class Player : MonoBehaviour
     {
         rb.velocity = new Vector2(velocity, rb.velocity.y);
         float characterVelocity = Mathf.Abs(rb.velocity.x);
-        Debug.Log(rb.velocity.x);
         animator.SetFloat("velocity", characterVelocity);
     }
 }
