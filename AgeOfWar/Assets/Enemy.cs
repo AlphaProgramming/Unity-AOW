@@ -9,6 +9,8 @@ public class Enemy : MonoBehaviour
     private Animator animator;
     private bool canMove;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +22,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        
         if (canMove)
         {
             rb.velocity = new Vector2(-velocity, rb.velocity.y);
@@ -44,4 +47,5 @@ public class Enemy : MonoBehaviour
             canMove = true;
         }
     }
+
 }
