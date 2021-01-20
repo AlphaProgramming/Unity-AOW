@@ -1736,6 +1736,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &230504968 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 352438607, guid: 0a08a93817c02ed409daeb57a805bf07,
+    type: 3}
+  m_PrefabInstance: {fileID: 1698949816}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &230504969 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 352438600, guid: 0a08a93817c02ed409daeb57a805bf07,
+    type: 3}
+  m_PrefabInstance: {fileID: 1698949816}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &230504971 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6620570829594995897, guid: 0a08a93817c02ed409daeb57a805bf07,
+    type: 3}
+  m_PrefabInstance: {fileID: 1698949816}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &256513982
 GameObject:
   m_ObjectHideFlags: 0
@@ -15128,6 +15146,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 352438608, guid: 0a08a93817c02ed409daeb57a805bf07, type: 3}
+      propertyPath: hitbox
+      value: 
+      objectReference: {fileID: 230504969}
+    - target: {fileID: 352438608, guid: 0a08a93817c02ed409daeb57a805bf07, type: 3}
+      propertyPath: trigger
+      value: 
+      objectReference: {fileID: 230504968}
+    - target: {fileID: 352438608, guid: 0a08a93817c02ed409daeb57a805bf07, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 230504971}
+    - target: {fileID: 352438608, guid: 0a08a93817c02ed409daeb57a805bf07, type: 3}
+      propertyPath: currentHealth
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 4564520586138268082, guid: 0a08a93817c02ed409daeb57a805bf07,
         type: 3}
       propertyPath: m_Name
@@ -15207,11 +15241,11 @@ PrefabInstance:
       objectReference: {fileID: 1430714729}
     - target: {fileID: 1763101070, guid: 1c5d18c5f325dd641a656367faf303ff, type: 3}
       propertyPath: m_Size.x
-      value: 6.5904336
+      value: 5.873678
       objectReference: {fileID: 0}
     - target: {fileID: 1763101070, guid: 1c5d18c5f325dd641a656367faf303ff, type: 3}
       propertyPath: m_Offset.x
-      value: 0.21062827
+      value: -0.045355678
       objectReference: {fileID: 0}
     - target: {fileID: 1763101071, guid: 1c5d18c5f325dd641a656367faf303ff, type: 3}
       propertyPath: attackRange
@@ -15230,7 +15264,7 @@ PrefabInstance:
     - target: {fileID: 8972202461756403644, guid: 1c5d18c5f325dd641a656367faf303ff,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -2.01
       objectReference: {fileID: 0}
     - target: {fileID: 8972202461756403644, guid: 1c5d18c5f325dd641a656367faf303ff,
         type: 3}
