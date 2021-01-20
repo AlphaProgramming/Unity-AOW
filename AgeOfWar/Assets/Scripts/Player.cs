@@ -24,19 +24,20 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        animator.SetFloat("velocity", rb.velocity.x);
+        animator.SetFloat("velocity", rb.velocity.x); //animation qui s'adapte avec la vitesse de marche du perso
+
         if (canMove)
         {
-            rb.velocity = new Vector2(velocity, rb.velocity.y);
+            rb.velocity = new Vector2(velocity, rb.velocity.y); 
         }
         else if(canAttack && !canMove)
         {
             Attack();
-            rb.velocity = new Vector2(0f, rb.velocity.y);
+            rb.velocity = new Vector2(0f, rb.velocity.y); // trigger la box collider de l'enemy
         }
         else if (!canAttack && !canMove)
         {
-            rb.velocity = new Vector2(0f, rb.velocity.y);
+            rb.velocity = new Vector2(0f, rb.velocity.y);// trigger la box collider d'un allié
         }
         
     }
