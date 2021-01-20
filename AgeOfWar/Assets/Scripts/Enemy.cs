@@ -65,26 +65,22 @@ public class Enemy : MonoBehaviour
 
     private void Attack()
     {
-        float randint = Random.Range(1, 5);
+        float randint = Random.Range(1, 4);
         if (Time.time >= nextAttackTime)
         {
             switch (randint)
             {
                 case 1:
                     attack.AttackOpponent();
-                    animator.SetTrigger("punch");
+                    animator.SetTrigger("AttackMH1");
                     break;
                 case 2:
                     attack.AttackOpponent();
-                    animator.SetTrigger("punch2");
+                    animator.SetTrigger("AttackMH2");
                     break;
                 case 3:
                     attack.AttackOpponent();
-                    animator.SetTrigger("kick");
-                    break;
-                case 4:
-                    attack.AttackOpponent();
-                    animator.SetTrigger("kick2");
+                    animator.SetTrigger("AttackMH3");
                     break;
             }
 
