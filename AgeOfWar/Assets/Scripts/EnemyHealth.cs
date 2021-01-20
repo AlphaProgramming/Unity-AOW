@@ -29,7 +29,8 @@ public class EnemyHealth : MonoBehaviour
     }
     private void Die()
     {
-        animator.SetBool("dead", true);
+        isDead = true;
+        animator.SetBool("dead", isDead);
         Destroy(GetComponent<Rigidbody2D>());
         trigger.enabled = false;
         hitbox.enabled = false;

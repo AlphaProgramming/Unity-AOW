@@ -70,26 +70,25 @@ public class Player : MonoBehaviour
             switch (randint)
             {
                 case 1:
-                    attack.AttackEnemy();
+                    attack.AttackOpponent();
                     animator.SetTrigger("punch");
                     break;
                 case 2:
-                    attack.AttackEnemy();
+                    attack.AttackOpponent();
                     animator.SetTrigger("punch2");
                     break;
                 case 3:
-                    attack.AttackEnemy();
+                    attack.AttackOpponent(10);
                     animator.SetTrigger("kick");
                     break;
                 case 4:
-                    attack.AttackEnemy();
+                    attack.AttackOpponent(10);
                     animator.SetTrigger("kick2");
                     break;
             }
 
             nextAttackTime = Time.time + 1f / attackRate;
         }
-        //animator.SetTrigger("punch2");
     }
 
 }
