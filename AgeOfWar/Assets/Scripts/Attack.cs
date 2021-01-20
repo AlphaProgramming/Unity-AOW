@@ -7,12 +7,13 @@ public class Attack : MonoBehaviour
     public Transform attackPoint;
     public LayerMask enemyLayers;
     public float attackRange = 5f;
-    private float attackDamage = 10f;
+    public float attackDamage = 10f;
+   
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -20,18 +21,31 @@ public class Attack : MonoBehaviour
     {
         
     }
-    public void AttackEnemy()
+    public void AttackOpponent()
     {
+        int i = 0;
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         foreach (Collider2D enemy in hitEnemies)
         {
-            for(int i = 0; i < 1; i++)
+            if(i==0) 
             {
                 enemy.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
+                i++;
             }
-            
         }
-
+    }
+    public void AttackOpponent(float crit)
+    {
+        int i = 0;
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+        foreach (Collider2D enemy in hitEnemies)
+        {
+            if (i == 0)
+            {
+                enemy.GetComponent<EnemyHealth>().TakeDamage(attackDamage+crit);
+                i++;
+            }
+        }
     }
 
     /// <summary>
