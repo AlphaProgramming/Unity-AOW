@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Bowman : MonoBehaviour
 {
     private Rigidbody2D rb;
     public float velocity = 5f;
@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     private bool canAttack;
     private float nextAttackTime;
     private float attackRate = 0.9f;
-    public Attack attack;
+    public BowmanAttack bowmanAttack;
 
 
     // Start is called before the first frame update
@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
         {
             rb.velocity = new Vector2(velocity, rb.velocity.y); // avance jusqu'au prochain ennemie/allié
         }
-        else if(canAttack && !canMove)
+        else if (canAttack && !canMove)
         {
             Attack();
             rb.velocity = new Vector2(0f, rb.velocity.y); // trigger la box collider de l'ennemie
@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
         {
             rb.velocity = new Vector2(0f, rb.velocity.y);// trigger la box collider d'un allié
         }
-        
+
     }
 
     void OnTriggerStay2D(Collider2D collision)
@@ -63,32 +63,11 @@ public class Player : MonoBehaviour
     }
     private void Attack()
     {
-        float randint = Random.Range(1, 5);
         if (Time.time >= nextAttackTime)
         {
-            switch (randint)
-            {
-                case 1:
-                    attack.AttackEnemy();
-                    animator.SetTrigger("punch");
-                    break;
-                case 2:
-                    attack.AttackEnemy();
-                    animator.SetTrigger("punch2");
-                    break;
-                case 3:
-                    attack.AttackEnemy();
-                    animator.SetTrigger("kick");
-                    break;
-                case 4:
-                    attack.AttackEnemy();
-                    animator.SetTrigger("kick2");
-                    break;
-            }
-
-            nextAttackTime = Time.time + 1f / attackRate;
+            animator.SetTrigger("shotArrow");
         }
-        //animator.SetTrigger("punch2");
+        nextAttackTime = Time.time + 1f / attackRate;
     }
 
 }

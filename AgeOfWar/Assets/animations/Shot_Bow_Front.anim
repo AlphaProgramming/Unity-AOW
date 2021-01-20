@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shot Bow Front
+  m_Name: Shot_Bow_Front
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -3356,165 +3356,6 @@ AnimationClip:
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
     path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Upper Arm L/Bone_Upper Arm
-      L/Pos_Lower Arm L/Bone_Lower Arm L
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Upper Arm L/Bone_Upper Arm
-      L/Pos_Lower Arm L/Bone_Lower Arm L
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Upper Arm L/Bone_Upper Arm
-      L/Pos_Lower Arm L/Bone_Lower Arm L
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
-    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Upper Arm L/Bone_Upper Arm
-      L/Pos_Lower Arm L/Bone_Lower Arm L/Pos_Hand L/Bone_Hand L/Pos_Weapon L/Bone_Weapon
-      L/Bow T/Bowstring T
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Upper Arm L/Bone_Upper Arm
-      L/Pos_Lower Arm L/Bone_Lower Arm L/Pos_Hand L/Bone_Hand L/Pos_Weapon L/Bone_Weapon
-      L/Bow T/Bowstring T
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Upper Arm L/Bone_Upper Arm
-      L/Pos_Lower Arm L/Bone_Lower Arm L/Pos_Hand L/Bone_Hand L/Pos_Weapon L/Bone_Weapon
-      L/Bow T/Bowstring T
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
-    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
-    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Neck/Bone_Neck
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Neck/Bone_Neck
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Neck/Bone_Neck
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
-    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Cape/Bone_Cape
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Cape/Bone_Cape
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Cape/Bone_Cape
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
-    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Upper Arm L/Bone_Upper Arm
       L/Pos_Lower Arm L/Bone_Lower Arm L/Pos_Hand L/Bone_Hand L
     classID: 4
     script: {fileID: 0}
@@ -3538,39 +3379,6 @@ AnimationClip:
     attribute: m_LocalEulerAngles.x
     path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Upper Arm L/Bone_Upper Arm
       L/Pos_Lower Arm L/Bone_Lower Arm L/Pos_Hand L/Bone_Hand L
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
-    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Upper Arm R/Bone_Upper Arm
-      R/Pos_Lower Arm R/Bone_Lower Arm R
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Upper Arm R/Bone_Upper Arm
-      R/Pos_Lower Arm R/Bone_Lower Arm R
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Upper Arm R/Bone_Upper Arm
-      R/Pos_Lower Arm R/Bone_Lower Arm R
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3613,9 +3421,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Upper Arm L/Bone_Upper Arm
-      L/Pos_Lower Arm L/Bone_Lower Arm L/Pos_Hand L/Bone_Hand L/Pos_Weapon L/Bone_Weapon
-      L
+    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Cape/Bone_Cape
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3625,9 +3431,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Upper Arm L/Bone_Upper Arm
-      L/Pos_Lower Arm L/Bone_Lower Arm L/Pos_Hand L/Bone_Hand L/Pos_Weapon L/Bone_Weapon
-      L
+    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Cape/Bone_Cape
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3637,9 +3441,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Upper Arm L/Bone_Upper Arm
-      L/Pos_Lower Arm L/Bone_Lower Arm L/Pos_Hand L/Bone_Hand L/Pos_Weapon L/Bone_Weapon
-      L
+    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Cape/Bone_Cape
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3679,6 +3481,168 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
+    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Neck/Bone_Neck
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Neck/Bone_Neck
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Neck/Bone_Neck
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Upper Arm R/Bone_Upper Arm
+      R/Pos_Lower Arm R/Bone_Lower Arm R/Pos_Hand R/Bone_Hand R
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Upper Arm R/Bone_Upper Arm
+      R/Pos_Lower Arm R/Bone_Lower Arm R/Pos_Hand R/Bone_Hand R
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Upper Arm R/Bone_Upper Arm
+      R/Pos_Lower Arm R/Bone_Lower Arm R/Pos_Hand R/Bone_Hand R
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Upper Arm R/Bone_Upper Arm
+      R/Pos_Lower Arm R/Bone_Lower Arm R
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Upper Arm R/Bone_Upper Arm
+      R/Pos_Lower Arm R/Bone_Lower Arm R
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Upper Arm R/Bone_Upper Arm
+      R/Pos_Lower Arm R/Bone_Lower Arm R
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Upper Arm L/Bone_Upper Arm
+      L/Pos_Lower Arm L/Bone_Lower Arm L/Pos_Hand L/Bone_Hand L/Pos_Weapon L/Bone_Weapon
+      L/Bow B
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Upper Arm L/Bone_Upper Arm
+      L/Pos_Lower Arm L/Bone_Lower Arm L/Pos_Hand L/Bone_Hand L/Pos_Weapon L/Bone_Weapon
+      L/Bow B
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Upper Arm L/Bone_Upper Arm
+      L/Pos_Lower Arm L/Bone_Lower Arm L/Pos_Hand L/Bone_Hand L/Pos_Weapon L/Bone_Weapon
+      L/Bow B
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
     path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Upper Arm L/Bone_Upper Arm
       L
     classID: 4
@@ -3703,6 +3667,75 @@ AnimationClip:
     attribute: m_LocalEulerAngles.x
     path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Upper Arm L/Bone_Upper Arm
       L
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Upper Arm L/Bone_Upper Arm
+      L/Pos_Lower Arm L/Bone_Lower Arm L
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Upper Arm L/Bone_Upper Arm
+      L/Pos_Lower Arm L/Bone_Lower Arm L
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Upper Arm L/Bone_Upper Arm
+      L/Pos_Lower Arm L/Bone_Lower Arm L
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Upper Arm L/Bone_Upper Arm
+      L/Pos_Lower Arm L/Bone_Lower Arm L/Pos_Hand L/Bone_Hand L/Pos_Weapon L/Bone_Weapon
+      L/Bow T
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Upper Arm L/Bone_Upper Arm
+      L/Pos_Lower Arm L/Bone_Lower Arm L/Pos_Hand L/Bone_Hand L/Pos_Weapon L/Bone_Weapon
+      L/Bow T
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Upper Arm L/Bone_Upper Arm
+      L/Pos_Lower Arm L/Bone_Lower Arm L/Pos_Hand L/Bone_Hand L/Pos_Weapon L/Bone_Weapon
+      L/Bow T
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3750,7 +3783,7 @@ AnimationClip:
     attribute: m_LocalEulerAngles.z
     path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Upper Arm L/Bone_Upper Arm
       L/Pos_Lower Arm L/Bone_Lower Arm L/Pos_Hand L/Bone_Hand L/Pos_Weapon L/Bone_Weapon
-      L/Bow B
+      L/Bow T/Bowstring T
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3762,7 +3795,7 @@ AnimationClip:
     attribute: m_LocalEulerAngles.y
     path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Upper Arm L/Bone_Upper Arm
       L/Pos_Lower Arm L/Bone_Lower Arm L/Pos_Hand L/Bone_Hand L/Pos_Weapon L/Bone_Weapon
-      L/Bow B
+      L/Bow T/Bowstring T
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3774,7 +3807,31 @@ AnimationClip:
     attribute: m_LocalEulerAngles.x
     path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Upper Arm L/Bone_Upper Arm
       L/Pos_Lower Arm L/Bone_Lower Arm L/Pos_Hand L/Bone_Hand L/Pos_Weapon L/Bone_Weapon
-      L/Bow B
+      L/Bow T/Bowstring T
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Upper Arm L/Bone_Upper Arm
+      L/Pos_Lower Arm L/Bone_Lower Arm L/Pos_Hand L/Bone_Hand L/Pos_Weapon L/Bone_Weapon
+      L
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Upper Arm L/Bone_Upper Arm
+      L/Pos_Lower Arm L/Bone_Lower Arm L/Pos_Hand L/Bone_Hand L/Pos_Weapon L/Bone_Weapon
+      L
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3786,64 +3843,7 @@ AnimationClip:
     attribute: m_LocalEulerAngles.z
     path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Upper Arm L/Bone_Upper Arm
       L/Pos_Lower Arm L/Bone_Lower Arm L/Pos_Hand L/Bone_Hand L/Pos_Weapon L/Bone_Weapon
-      L/Bow T
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Upper Arm L/Bone_Upper Arm
-      L/Pos_Lower Arm L/Bone_Lower Arm L/Pos_Hand L/Bone_Hand L/Pos_Weapon L/Bone_Weapon
-      L/Bow T
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Upper Arm L/Bone_Upper Arm
-      L/Pos_Lower Arm L/Bone_Lower Arm L/Pos_Hand L/Bone_Hand L/Pos_Weapon L/Bone_Weapon
-      L/Bow T
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Upper Arm R/Bone_Upper Arm
-      R/Pos_Lower Arm R/Bone_Lower Arm R/Pos_Hand R/Bone_Hand R
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Upper Arm R/Bone_Upper Arm
-      R/Pos_Lower Arm R/Bone_Lower Arm R/Pos_Hand R/Bone_Hand R
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
-    path: Root/Pos_Hip/Bone_Hip/Pos_Body/Bone_Body/Pos_Upper Arm R/Bone_Upper Arm
-      R/Pos_Lower Arm R/Bone_Lower Arm R/Pos_Hand R/Bone_Hand R
+      L
     classID: 4
     script: {fileID: 0}
   m_HasGenericRootTransform: 0
