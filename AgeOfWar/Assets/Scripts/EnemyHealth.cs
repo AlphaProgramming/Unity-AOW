@@ -40,6 +40,7 @@ public class EnemyHealth : MonoBehaviour
         left.enabled = false;
         Invoke("StopAnimator", 2.1f);
         this.enabled = false;
+
     }
     private void StopAnimator()
     {
@@ -50,25 +51,22 @@ public class EnemyHealth : MonoBehaviour
     {
         GameObject tempTextBox = (GameObject)Instantiate(TextDamage, transform.position, Quaternion.identity);
         TextMesh theText = tempTextBox.transform.GetComponent<TextMesh>();
-
-       
-        Color myColor = new Color32(0x5B, 0xB1, 0xD2, 0xFF);
-        Color color2 = new Color(255, 96, 0);
-        Color color3 = new Color(255, 0, 0);
         if (damage < 33)
         {
-            theText.color = myColor;
-            theText.text = damage.ToString();
+            theText.color = Color.white;
+            theText.text = "-" + damage.ToString();
         }
         else if (damage > 33 && damage < 66)
         {
-            theText.color = color2;
-            theText.text = damage.ToString();
+            theText.fontSize = 245;
+            theText.color = Color.red;
+            theText.text = "-" + damage.ToString();
         }
         else
         {
-            theText.color = color3;
-            theText.text = damage.ToString();
+            theText.fontSize = 285;
+            theText.color = Color.yellow;
+            theText.text = "-" + damage.ToString();
         }
     }
 }
