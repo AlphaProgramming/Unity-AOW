@@ -9,7 +9,8 @@ public class EnemyHealth : MonoBehaviour
     public Animator animator;
     private bool isDead;
     public Collider2D hitbox;
-    public Collider2D trigger;
+    public Collider2D left;
+    public Collider2D right;
 
     // Start is called before the first frame update
     void Start()
@@ -32,8 +33,9 @@ public class EnemyHealth : MonoBehaviour
         isDead = true;
         animator.SetBool("dead", isDead);
         Destroy(GetComponent<Rigidbody2D>());
-        trigger.enabled = false;
         hitbox.enabled = false;
+        right.enabled = false;
+        left.enabled = false;
         Invoke("StopAnimator", 2.1f);
         this.enabled = false;
     }

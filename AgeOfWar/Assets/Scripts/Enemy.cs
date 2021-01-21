@@ -35,6 +35,7 @@ public class Enemy : MonoBehaviour
         }
         else if (canAttack && !canMove)
         {
+            Debug.Log("hey");
             Attack();
             rb.velocity = new Vector2(0f, rb.velocity.y); // trigger la box collider de l'ennemie
         }
@@ -50,12 +51,12 @@ public class Enemy : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.transform.tag == "Player") // il s'arrête de marcher et attaque
+        if (collision.gameObject.transform.tag == "Right") // il s'arrête de marcher et attaque
         {
             canAttack = true;
             canMove = false;
         }
-        else if (collision.gameObject.transform.tag == "Enemy") // il s'arrête de marcher et attaque
+        else if (collision.gameObject.transform.tag == "RightE") // il s'arrête de marcher et attaque
         {
             canMove = false;
         }
@@ -64,12 +65,12 @@ public class Enemy : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.transform.tag == "Player") // il se remet à marcher dès qu'il trigger pas de collider d'un enemy
+        if (collision.gameObject.transform.tag == "Right") // il se remet à marcher dès qu'il trigger pas de collider d'un enemy
         {
             canAttack = false;
             canMove = true;
         }
-        else if (collision.gameObject.transform.tag == "Enemy") // il s'arrête d'attaquer et marque
+        else if (collision.gameObject.transform.tag == "RightE") // il s'arrête d'attaquer et marque
         {
             canMove = true;
         }
