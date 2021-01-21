@@ -7,8 +7,8 @@ public class Enemy : MonoBehaviour
     private Rigidbody2D rb;
     public float velocity = 5f;
     private Animator animator;
-    private bool canMove;
-    private bool canAttack;
+    public bool canMove;
+    public bool canAttack;
     public Attack attack;
     private float nextAttackTime;
     private float attackRate = 0.9f;
@@ -42,6 +42,10 @@ public class Enemy : MonoBehaviour
         {
             rb.velocity = new Vector2(0f, rb.velocity.y);// trigger la box collider d'un allié
         }
+        else if (!canAttack && canMove)
+        {
+            rb.velocity = new Vector2(-velocity, rb.velocity.y);// trigger la box collider d'un allié
+        }
     }
 
     void OnTriggerStay2D(Collider2D collision)
@@ -49,6 +53,10 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.transform.tag == "Player") // il s'arrête de marcher et attaque
         {
             canAttack = true;
+            canMove = false;
+        }
+        else if (collision.gameObject.transform.tag == "Enemy") // il s'arrête de marcher et attaque
+        {
             canMove = false;
         }
 
@@ -61,6 +69,10 @@ public class Enemy : MonoBehaviour
             canAttack = false;
             canMove = true;
         }
+        else if (collision.gameObject.transform.tag == "Enemy") // il s'arrête d'attaquer et marque
+        {
+            canMove = true;
+        }
     }
 
     private void Attack()
@@ -71,15 +83,15 @@ public class Enemy : MonoBehaviour
             switch (randint)
             {
                 case 1:
-                    attack.AttackOpponent();
+                    //attack.AttackOpponent();
                     animator.SetTrigger("AttackMH1");
                     break;
                 case 2:
-                    attack.AttackOpponent();
+                    //attack.AttackOpponent();
                     animator.SetTrigger("AttackMH2");
                     break;
                 case 3:
-                    attack.AttackOpponent();
+                    //attack.AttackOpponent();
                     animator.SetTrigger("AttackMH3");
                     break;
             }

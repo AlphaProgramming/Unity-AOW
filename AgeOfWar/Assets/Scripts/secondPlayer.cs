@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class secondPlayer : MonoBehaviour
 {
     public Rigidbody2D rb;
     public float velocity = 5f;
@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
         {
             rb.velocity = new Vector2(velocity, rb.velocity.y); // avance jusqu'au prochain ennemie/allié
         }
-        else if(canAttack && !canMove)
+        else if (canAttack && !canMove)
         {
             Attack();
             rb.velocity = new Vector2(0f, rb.velocity.y); // trigger la box collider de l'ennemie
@@ -48,6 +48,13 @@ public class Player : MonoBehaviour
 
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.transform.tag == "Player") // il s'arrête de marcher
+        {
+            canMove = false;
+        }
+    }
     void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.transform.tag == "Enemy") // il s'arrête de marcher et attaque
@@ -55,11 +62,6 @@ public class Player : MonoBehaviour
             canAttack = true;
             canMove = false;
         }
-        else if (collision.gameObject.transform.tag == "Player") // il s'arrête de marcher et attaque
-        {
-            canMove = false;
-        }
-
     }
 
     void OnTriggerExit2D(Collider2D collision)
@@ -69,33 +71,29 @@ public class Player : MonoBehaviour
             canAttack = false;
             canMove = true;
         }
-        else if (collision.gameObject.transform.tag == "Player") // il s'arrête d'attaquer et marque
+        else if (collision.gameObject.transform.tag == "Player") // il s'arrête d'attaquer
         {
             canMove = true;
         }
     }
     private void Attack()
     {
-        float randint = Random.Range(1, 5);
+        float randint = Random.Range(1, 4);
         if (Time.time >= nextAttackTime)
         {
             switch (randint)
             {
                 case 1:
                     attack.AttackOpponent();
-                    animator.SetTrigger("punch");
+                    animator.SetTrigger("AttackBH1");
                     break;
                 case 2:
                     attack.AttackOpponent();
-                    animator.SetTrigger("punch2");
+                    animator.SetTrigger("AttackBH2");
                     break;
                 case 3:
-                    attack.AttackOpponent(10);
-                    animator.SetTrigger("kick");
-                    break;
-                case 4:
-                    attack.AttackOpponent(10);
-                    animator.SetTrigger("kick2");
+                    attack.AttackOpponent();
+                    animator.SetTrigger("AttackBH3");
                     break;
             }
 
@@ -104,3 +102,4 @@ public class Player : MonoBehaviour
     }
 
 }
+
