@@ -63,9 +63,11 @@ public class Bowman : MonoBehaviour
     }
     private void Attack()
     {
+        
         if (Time.time >= nextAttackTime)
         {
             animator.SetTrigger("shotArrow");
+            
         }
         nextAttackTime = Time.time + 1f / attackRate;
     }
