@@ -11,7 +11,6 @@ public class EnemyHealth : MonoBehaviour
     public Collider2D hitbox;
     public Collider2D left;
     public Collider2D right;
-    public Collider2D trigger;
     public GameObject TextDamage;
 
     // Start is called before the first frame update
