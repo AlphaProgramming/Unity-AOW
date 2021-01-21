@@ -48,18 +48,16 @@ public class EnemyHealth : MonoBehaviour
 
     private void MakeTextDamage(float damage)
     {
-        Vector2 pos = transform.position;
-        pos.y = 15;
-        GameObject tempTextBox = (GameObject)Instantiate(TextDamage, pos, Quaternion.identity);
+        GameObject tempTextBox = (GameObject)Instantiate(TextDamage, transform.position, Quaternion.identity);
         TextMesh theText = tempTextBox.transform.GetComponent<TextMesh>();
 
-
-        Color color1 = new Color(96, 0, 0);
+       
+        Color myColor = new Color32(0x5B, 0xB1, 0xD2, 0xFF);
         Color color2 = new Color(255, 96, 0);
         Color color3 = new Color(255, 0, 0);
         if (damage < 33)
         {
-            theText.color = color1;
+            theText.color = myColor;
             theText.text = damage.ToString();
         }
         else if (damage > 33 && damage < 66)
