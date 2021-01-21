@@ -10,7 +10,7 @@ public class Bowman : MonoBehaviour
     private bool canMove;
     private bool canAttack;
     private float nextAttackTime;
-    private float attackRate = 0.9f;
+    private float attackRate = 1f;
     public BowmanAttack bowmanAttack;
 
 
@@ -63,13 +63,12 @@ public class Bowman : MonoBehaviour
     }
     private void Attack()
     {
-        
+        animator.SetBool("shotArrow", false);
         if (Time.time >= nextAttackTime)
         {
-            animator.SetTrigger("shotArrow");
-            
+            animator.SetBool("shotArrow", true);
+            nextAttackTime = Time.time + 1f / attackRate;
         }
-        nextAttackTime = Time.time + 1f / attackRate;
     }
 
 }
