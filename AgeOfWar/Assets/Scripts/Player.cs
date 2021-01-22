@@ -57,7 +57,6 @@ public class Player : MonoBehaviour
         }
         else if (collision.gameObject.transform.tag == "Left") // il s'arrête de marcher 
         {
-            Debug.Log("trigger");
             canMove = false;
             canAttack = false;
         }

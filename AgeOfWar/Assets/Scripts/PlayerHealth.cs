@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyHealth : MonoBehaviour
+public class PlayerHealth : MonoBehaviour
 {
     private float maxHealth = 100;
     public float currentHealth;
@@ -24,7 +24,8 @@ public class EnemyHealth : MonoBehaviour
     {
         currentHealth -= damage;
         MakeTextDamage(damage);
-        if(currentHealth <= 0)
+        Debug.Log(currentHealth);
+        if (currentHealth <= 0)
         {
             Die();
         }
@@ -39,7 +40,6 @@ public class EnemyHealth : MonoBehaviour
         left.enabled = false;
         Invoke("StopAnimator", 2.1f);
         this.enabled = false;
-
     }
     private void StopAnimator()
     {
@@ -48,24 +48,29 @@ public class EnemyHealth : MonoBehaviour
 
     private void MakeTextDamage(float damage)
     {
-        GameObject tempTextBox = (GameObject)Instantiate(TextDamage, transform.position, Quaternion.identity);
+        Vector2 pos = transform.position;
+        pos.y = 15;
+        GameObject tempTextBox = (GameObject)Instantiate(TextDamage, pos, Quaternion.identity);
         TextMesh theText = tempTextBox.transform.GetComponent<TextMesh>();
+
+
+        Color color1 = new Color(96, 0, 0);
+        Color color2 = new Color(255, 96, 0);
+        Color color3 = new Color(255, 0, 0);
         if (damage < 33)
         {
-            theText.color = Color.white;
-            theText.text = "-" + damage.ToString();
+            theText.color = color1;
+            theText.text = damage.ToString();
         }
         else if (damage > 33 && damage < 66)
         {
-            theText.fontSize = 245;
-            theText.color = Color.red;
-            theText.text = "-" + damage.ToString();
+            theText.color = color2;
+            theText.text = damage.ToString();
         }
         else
         {
-            theText.fontSize = 285;
-            theText.color = Color.yellow;
-            theText.text = "-" + damage.ToString();
+            theText.color = color3;
+            theText.text = damage.ToString();
         }
     }
 }
