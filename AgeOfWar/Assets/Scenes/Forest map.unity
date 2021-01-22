@@ -3905,7 +3905,7 @@ PrefabInstance:
     - target: {fileID: 4186507413337153918, guid: 7a6924571cf4a8348b4d4f7cadd5ee9c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.11
+      value: -25.56
       objectReference: {fileID: 0}
     - target: {fileID: 4186507413337153918, guid: 7a6924571cf4a8348b4d4f7cadd5ee9c,
         type: 3}
@@ -6128,7 +6128,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 456d24e5008e1eb47966708ebfc080db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackPoint: {fileID: 647805753}
   enemyLayers:
     serializedVersion: 2
     m_Bits: 256
@@ -10132,7 +10131,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 456d24e5008e1eb47966708ebfc080db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackPoint: {fileID: 39257589}
   enemyLayers:
     serializedVersion: 2
     m_Bits: 512
@@ -10151,10 +10149,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 100
-  animator: {fileID: 738571806}
-  hitbox: {fileID: 738571800}
-  left: {fileID: 2112289364}
-  right: {fileID: 627322658}
   TextDamage: {fileID: 3209788723291308180, guid: 7454ebc06c961f44ab6721ba43697d8f,
     type: 3}
 --- !u!114 &738571803
@@ -10194,12 +10188,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!95 &738571806 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 454434165837404049, guid: 028381521c8e8e5478c1468451fdbd4e,
-    type: 3}
-  m_PrefabInstance: {fileID: 683064345}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &738571809 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5699257337725014595, guid: 028381521c8e8e5478c1468451fdbd4e,
@@ -11277,7 +11265,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 456d24e5008e1eb47966708ebfc080db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackPoint: {fileID: 1248230120}
   enemyLayers:
     serializedVersion: 2
     m_Bits: 256
@@ -16265,7 +16252,7 @@ PrefabInstance:
     - target: {fileID: 312389066183599357, guid: 4e0ea92938a252f4cbfd548426bf0f9d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.82
+      value: -33.7
       objectReference: {fileID: 0}
     - target: {fileID: 312389066183599357, guid: 4e0ea92938a252f4cbfd548426bf0f9d,
         type: 3}
@@ -21154,18 +21141,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 456d24e5008e1eb47966708ebfc080db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackPoint: {fileID: 2075595056}
   enemyLayers:
     serializedVersion: 2
     m_Bits: 256
   attackRange: 2
   attackDamage: 10
---- !u!95 &2045958502 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 7837252090744867487, guid: f4202256a2b46044eb33444b5b0ec6fe,
-    type: 3}
-  m_PrefabInstance: {fileID: 310073905}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2045958503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21179,10 +21159,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 100
-  animator: {fileID: 2045958502}
-  hitbox: {fileID: 2045958498}
-  left: {fileID: 132125664}
-  right: {fileID: 544794013}
   TextDamage: {fileID: 3209788723291308180, guid: 7454ebc06c961f44ab6721ba43697d8f,
     type: 3}
 --- !u!4 &2045958505 stripped
