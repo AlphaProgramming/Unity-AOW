@@ -17339,7 +17339,7 @@ GameObject:
   - component: {fileID: 6408844470410399542}
   m_Layer: 9
   m_Name: 61
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17786,9 +17786,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyLayers:
     serializedVersion: 2
-    m_Bits: 256
-  attackRange: 5
-  attackDamage: 10
+    m_Bits: 512
+  attackRange: 2
+  attackDamage: 15
 --- !u!114 &6408844470410399543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17817,7 +17817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29e04689df819de419fa3b0d129ade60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 120
+  currentHealth: 150
   TextDamage: {fileID: 3209788723291308180, guid: 7454ebc06c961f44ab6721ba43697d8f,
     type: 3}
   shieldPlayer: {fileID: 0}

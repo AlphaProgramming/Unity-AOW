@@ -91,11 +91,11 @@ public class Player : MonoBehaviour
                     animator.SetTrigger("punch2");
                     break;
                 case 3:
-                    attack.AttackOpponent(10);
+                    attack.AttackOpponent(2);
                     animator.SetTrigger("kick");
                     break;
                 case 4:
-                    attack.AttackOpponent(10);
+                    attack.AttackOpponent(2);
                     animator.SetTrigger("kick2");
                     break;
             }

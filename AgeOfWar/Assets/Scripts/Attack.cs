@@ -35,7 +35,7 @@ public class Attack : MonoBehaviour
         {
             if (i == 0)
             {
-                enemy.GetComponent<EnemyHealth>().TakeDamage(attackDamage+crit);
+                enemy.GetComponent<EnemyHealth>().TakeDamage(attackDamage*crit);
                 i++;
             }
         }
@@ -61,7 +61,7 @@ public class Attack : MonoBehaviour
         {
             if (i == 0)
             {
-                enemy.GetComponent<PlayerHealth>().TakeDamage(attackDamage + crit);
+                enemy.GetComponent<PlayerHealth>().TakeDamage(attackDamage * crit);
                 i++;
             }
         }
