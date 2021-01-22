@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyHealth : MonoBehaviour
+public class PlayerHealth : MonoBehaviour
 {
     private float maxHealth = 100;
     public float currentHealth;
@@ -24,7 +24,8 @@ public class EnemyHealth : MonoBehaviour
     {
         currentHealth -= damage;
         MakeTextDamage(damage);
-        if(currentHealth <= 0)
+        Debug.Log(currentHealth);
+        if (currentHealth <= 0)
         {
             Die();
         }

@@ -35,7 +35,6 @@ public class Enemy : MonoBehaviour
         }
         else if (canAttack && !canMove)
         {
-            Debug.Log("hey");
             Attack();
             rb.velocity = new Vector2(0f, rb.velocity.y); // trigger la box collider de l'ennemie
         }
@@ -56,7 +55,7 @@ public class Enemy : MonoBehaviour
             canAttack = true;
             canMove = false;
         }
-        else if (collision.gameObject.transform.tag == "RightE") // il s'arrête de marcher et attaque
+        else if (collision.gameObject.transform.tag == "RightE") // il s'arrête de marcher
         {
             canMove = false;
         }
@@ -84,15 +83,15 @@ public class Enemy : MonoBehaviour
             switch (randint)
             {
                 case 1:
-                    //attack.AttackOpponent();
+                    attack.AttackAlly();
                     animator.SetTrigger("AttackMH1");
                     break;
                 case 2:
-                    //attack.AttackOpponent();
+                    attack.AttackAlly();
                     animator.SetTrigger("AttackMH2");
                     break;
                 case 3:
-                    //attack.AttackOpponent();
+                    attack.AttackAlly();
                     animator.SetTrigger("AttackMH3");
                     break;
             }
