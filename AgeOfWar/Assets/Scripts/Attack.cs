@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
-    public Transform attackPoint;
+    private Transform attackPoint;
     public LayerMask enemyLayers;
     public float attackRange = 5f;
     public float attackDamage = 10f;
    
+    private void Start()
+    {
+        attackPoint = transform.Find("AttackPoint");
+    }
 
     public void AttackOpponent()
     {
@@ -39,8 +43,8 @@ public class Attack : MonoBehaviour
     public void AttackAlly()
     {
         int i = 0;
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
-        foreach (Collider2D enemy in hitEnemies)
+        Collider2D[] hitAlly = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+        foreach (Collider2D enemy in hitAlly)
         {
             if (i == 0)
             {
@@ -52,8 +56,8 @@ public class Attack : MonoBehaviour
     public void AttackAlly(float crit)
     {
         int i = 0;
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
-        foreach (Collider2D enemy in hitEnemies)
+        Collider2D[] hitAlly = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+        foreach (Collider2D enemy in hitAlly)
         {
             if (i == 0)
             {

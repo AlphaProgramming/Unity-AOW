@@ -6,18 +6,18 @@ public class EnemyHealth : MonoBehaviour
 {
     private float maxHealth = 100;
     public float currentHealth;
-    public Animator animator;
+    private Animator animator;
     private bool isDead;
-    public Collider2D hitbox;
-    public Collider2D left;
-    public Collider2D right;
     public GameObject TextDamage;
+    private BoxCollider2D[] triggers;
 
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
         isDead = false;
+        triggers = GetComponentsInChildren<BoxCollider2D>();
+        animator = GetComponent<Animator>();
     }
 
     public void TakeDamage(float damage)
@@ -34,10 +34,10 @@ public class EnemyHealth : MonoBehaviour
         isDead = true;
         animator.SetBool("dead", isDead);
         Destroy(GetComponent<Rigidbody2D>());
-        hitbox.enabled = false;
-        right.enabled = false;
-        left.enabled = false;
+        Destroy(GetComponent<BoxCollider2D>());
+        DisableTriggers();
         Invoke("StopAnimator", 2.1f);
+        Destroy(gameObject, 2.5f);
         this.enabled = false;
 
     }
@@ -66,6 +66,13 @@ public class EnemyHealth : MonoBehaviour
             theText.fontSize = 285;
             theText.color = Color.yellow;
             theText.text = "-" + damage.ToString();
+        }
+    }
+    private void DisableTriggers()
+    {
+        foreach (BoxCollider2D col in triggers)
+        {
+            col.enabled = false;
         }
     }
 }

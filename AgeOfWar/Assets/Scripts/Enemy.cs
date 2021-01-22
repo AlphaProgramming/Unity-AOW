@@ -69,7 +69,7 @@ public class Enemy : MonoBehaviour
             canAttack = false;
             canMove = true;
         }
-        else if (collision.gameObject.transform.tag == "RightE") // il s'arrête d'attaquer et marque
+        else if (collision.gameObject.transform.tag == "RightE") // il se remet à marcher pour suivre son coop
         {
             canMove = true;
         }
