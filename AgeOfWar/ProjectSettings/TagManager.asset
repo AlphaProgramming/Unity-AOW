@@ -9,6 +9,7 @@ TagManager:
   - Right
   - LeftE
   - RightE
+  - Arrow
   layers:
   - Default
   - TransparentFX
