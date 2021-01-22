@@ -12,6 +12,9 @@ public class Bowman : MonoBehaviour
     private float nextAttackTime;
     private float attackRate = 1f;
     public BowmanAttack bowmanAttack;
+    public GameObject arrow;
+    public float launchForce;
+    public Transform shotPoint;
 
 
     // Start is called before the first frame update
@@ -67,8 +70,14 @@ public class Bowman : MonoBehaviour
         if (Time.time >= nextAttackTime)
         {
             animator.SetBool("shotArrow", true);
+            Shoot();
             nextAttackTime = Time.time + 1f / attackRate;
         }
     }
 
+    private void Shoot()
+    {
+        GameObject newArrow = Instantiate(arrow, shotPoint.position, shotPoint.rotation);
+        newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * launchForce;
+    }
 }
