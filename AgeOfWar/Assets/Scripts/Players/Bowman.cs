@@ -10,9 +10,9 @@ public class Bowman : MonoBehaviour
     private bool canMove;
     private bool canAttack;
     private float nextAttackTime;
-    private float attackRate = 1f;
+    private float attackRate = 0.7f;
     public BowmanAttack bowmanAttack;
-    public GameObject arrow;
+    private SpriteRenderer arrow;
     public float launchForce;
     public Transform shotPoint;
 
@@ -23,6 +23,8 @@ public class Bowman : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         canMove = true;
+        arrow = GameObject.FindGameObjectWithTag("Arrow").GetComponent<SpriteRenderer>();
+        shotPoint = transform.Find("ShotPoint");
     }
 
     // Update is called once per frame
@@ -77,7 +79,7 @@ public class Bowman : MonoBehaviour
 
     private void Shoot()
     {
-        GameObject newArrow = Instantiate(arrow, shotPoint.position, shotPoint.rotation);
+        SpriteRenderer newArrow = Instantiate(arrow, shotPoint.position, Quaternion.Euler(0f,0f,-90f));
         newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * launchForce;
     }
 }
