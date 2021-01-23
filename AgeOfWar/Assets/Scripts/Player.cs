@@ -12,7 +12,6 @@ public class Player : MonoBehaviour
     private float nextAttackTime;
     private float attackRate = 0.9f;
     public bool shield = false;
-
     private Attack attack;
 
 
