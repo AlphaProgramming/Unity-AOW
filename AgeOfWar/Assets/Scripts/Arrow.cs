@@ -6,10 +6,12 @@ public class Arrow : MonoBehaviour
 {
     Rigidbody2D rb;
     bool hasHit;
+    PolygonCollider2D bc;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        bc = GetComponent<PolygonCollider2D>();
     }
 
     // Update is called once per frame
@@ -17,8 +19,13 @@ public class Arrow : MonoBehaviour
     {
         if (hasHit == false)
         {
+            Vector2 direction = rb.velocity;
             float angle = Mathf.Atan2(rb.velocity.y, rb.velocity.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        }
+        else
+        {
+            Destroy(this.bc);
+            Destroy(this.gameObject,0.1f);
         }
     }
 

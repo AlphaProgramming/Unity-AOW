@@ -70,14 +70,16 @@ public class Bowman : MonoBehaviour
         animator.SetBool("shotArrow", false);
         if (Time.time >= nextAttackTime)
         {
-            animator.SetBool("shotArrow", true);
-            Shoot();
             nextAttackTime = Time.time + 1f / attackRate;
+            animator.SetBool("shotArrow", true);
+            StartCoroutine("Shoot");
+
         }
     }
 
-    private void Shoot()
+    IEnumerator Shoot()
     {
+        yield return new WaitForSeconds(0.54f);
         GameObject newArrow = Instantiate(arrow, shotPoint.position, Quaternion.Euler(0f,0f,-90f));
         newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * launchForce;
     }
