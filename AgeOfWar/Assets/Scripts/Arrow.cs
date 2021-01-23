@@ -24,6 +24,7 @@ public class Arrow : MonoBehaviour
         }
         else
         {
+
             Destroy(this.bc);
             Destroy(this.gameObject,0.1f);
         }
