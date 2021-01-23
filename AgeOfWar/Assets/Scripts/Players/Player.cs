@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public Rigidbody2D rb;
-    public float velocity = 5f;
-    public Animator animator;
+    private Rigidbody2D rb;
+    public float velocity = 6f;
+    private Animator animator;
     public bool canMove;
     public bool canAttack;
     private float nextAttackTime;
     private float attackRate = 0.9f;
 
-    public Attack attack;
+    private Attack attack;
 
 
     // Start is called before the first frame update
@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         canMove = true;
+        attack = GetComponent<Attack>();
     }
 
     // Update is called once per frame
