@@ -82,14 +82,22 @@ public class Bowman : MonoBehaviour
     }
     private void BowAttack()
     {
-        int i = 1;
+        int i = 2;
         animator.SetBool("shotArrow", false);
         if (Time.time >= nextAttackTime)
         {
             nextAttackTime = Time.time + 1f / attackRate;
             animator.SetBool("shotArrow", true);
-            StartCoroutine("Shoot");
-
+            if (i % 2 == 0)
+            {
+                StartCoroutine("Shoot");
+                nextAttackTime += 0.8f;
+            }
+            else
+            {
+                StartCoroutine("Shoot");
+            }
+            i++;
 
         }
     }
