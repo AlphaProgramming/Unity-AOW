@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     public bool canAttack;
     private float nextAttackTime;
     private float attackRate = 0.9f;
+    public bool shield = false;
 
     private Attack attack;
 
@@ -35,7 +36,23 @@ public class Player : MonoBehaviour
         }
         else if(canAttack && !canMove)
         {
-            Attack();
+            string tagname = gameObject.transform.tag;
+
+            switch (tagname)
+            {
+                case "Sword":
+                    SwordAttack();
+                    break;
+                case "Shield":
+                    ShieldAttack();
+                    break;
+                case "Second":
+                    SecondAttack();
+                    break;
+                case "Player":
+                    Attack();
+                    break;
+            }
             rb.velocity = new Vector2(0f, rb.velocity.y); // trigger la box collider de l'ennemie
         }
         else if (!canAttack && !canMove)
@@ -103,6 +120,88 @@ public class Player : MonoBehaviour
 
             nextAttackTime = Time.time + 1f / attackRate;
         }
+    }
+    private void ShieldAttack()
+    {
+        float randint = Random.Range(1, 3);
+        if (Time.time >= nextAttackTime)
+        {
+            switch (randint)
+            {
+                case 1:
+                    shield = true;
+                    animator.SetTrigger("Shield");
+                    Invoke("SetShield", 1f);
+                    break;
+                case 2:
+                    attack.AttackOpponent();
+                    animator.SetTrigger("AttackMH1");
+                    break;
+                case 3:
+                    attack.AttackOpponent(10);
+                    animator.SetTrigger("AttackMH2");
+                    break;
+                case 4:
+                    attack.AttackOpponent(10);
+                    animator.SetTrigger("AttackMH3");
+                    break;
+            }
+
+            nextAttackTime = Time.time + 1f / attackRate;
+        }
+    }
+    private void SecondAttack()
+    {
+        float randint = Random.Range(1, 4);
+        if (Time.time >= nextAttackTime)
+        {
+            switch (randint)
+            {
+                case 1:
+                    attack.AttackOpponent();
+                    animator.SetTrigger("AttackBH1");
+                    break;
+                case 2:
+                    attack.AttackOpponent();
+                    animator.SetTrigger("AttackBH2");
+                    break;
+                case 3:
+                    attack.AttackOpponent();
+                    animator.SetTrigger("AttackBH3");
+                    break;
+            }
+
+            nextAttackTime = Time.time + 1f / attackRate;
+        }
+    }
+    private void SwordAttack()
+    {
+        float randint = Random.Range(1, 4);
+        if (Time.time >= nextAttackTime)
+        {
+            switch (randint)
+            {
+                case 1:
+                    attack.AttackOpponent();
+                    animator.SetTrigger("AttackMH1");
+                    break;
+                case 2:
+                    attack.AttackOpponent();
+                    animator.SetTrigger("AttackMH2");
+                    break;
+                case 3:
+                    attack.AttackOpponent();
+                    animator.SetTrigger("AttackMH3");
+                    break;
+            }
+
+            nextAttackTime = Time.time + 1f / attackRate;
+        }
+    }
+
+    private void SetShield()
+    {
+        shield = false;
     }
 
 }

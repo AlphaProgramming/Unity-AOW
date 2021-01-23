@@ -206,7 +206,7 @@ MonoBehaviour:
   enemyLayers:
     serializedVersion: 2
     m_Bits: 256
-  attackRange: 1
+  attackRange: 2
   attackDamage: 25
 --- !u!114 &640484365
 MonoBehaviour:
@@ -223,8 +223,7 @@ MonoBehaviour:
   currentHealth: 100
   TextDamage: {fileID: 3209788723291308180, guid: 7454ebc06c961f44ab6721ba43697d8f,
     type: 3}
-  shieldPlayer: {fileID: 0}
---- !u!114 &1092507586094947384
+--- !u!114 &5439051440086946999
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -233,15 +232,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 8709830053095067124}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd05f266c13093e4e822e39c0e3023a2, type: 3}
+  m_Script: {fileID: 11500000, guid: a808e4a31c1b2eb458a5b3b1b9a45ed1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 640484368}
   velocity: 6
-  animator: {fileID: 12254349452384552}
   canMove: 0
   canAttack: 0
-  attack: {fileID: 640484364}
+  shield: 0
 --- !u!1001 &3913613873516139549
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -797,7 +794,7 @@ PrefabInstance:
     - target: {fileID: 5661160367984253417, guid: 88cad9c3035dd814a80ad19057223e43,
         type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Sword
       objectReference: {fileID: 0}
     - target: {fileID: 5724628548732336434, guid: 88cad9c3035dd814a80ad19057223e43,
         type: 3}
@@ -1065,12 +1062,6 @@ GameObject:
 --- !u!4 &7266009259538183629 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5952069830134768080, guid: 88cad9c3035dd814a80ad19057223e43,
-    type: 3}
-  m_PrefabInstance: {fileID: 3913613873516139549}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &12254349452384552 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 3919392065051970869, guid: 88cad9c3035dd814a80ad19057223e43,
     type: 3}
   m_PrefabInstance: {fileID: 3913613873516139549}
   m_PrefabAsset: {fileID: 0}

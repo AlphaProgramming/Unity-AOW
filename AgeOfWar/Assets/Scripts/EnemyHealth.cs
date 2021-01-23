@@ -67,6 +67,8 @@ public class EnemyHealth : MonoBehaviour
             theText.color = Color.yellow;
             theText.text = "-" + damage.ToString();
         }
+        Destroy(tempTextBox,0.5f);
+        Destroy(theText,0.5f);
     }
     private void DisableTriggers()
     {

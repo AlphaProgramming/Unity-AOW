@@ -191,24 +191,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.4771159, y: 11.565659}
   m_EdgeRadius: 0
---- !u!114 &1667952805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5057378809462774758}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79d9c90443c97c94e9d9dafddb9e87a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 1667952809}
-  velocity: 6
-  animator: {fileID: 3932915564165857508}
-  canMove: 0
-  canAttack: 0
-  attack: {fileID: 1667952806}
 --- !u!114 &1667952806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,7 +223,22 @@ MonoBehaviour:
   currentHealth: 100
   TextDamage: {fileID: 3209788723291308180, guid: 7454ebc06c961f44ab6721ba43697d8f,
     type: 3}
-  shieldPlayer: {fileID: 0}
+--- !u!114 &3728365712047388812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5057378809462774758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a808e4a31c1b2eb458a5b3b1b9a45ed1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: 6
+  canMove: 0
+  canAttack: 0
+  shield: 0
 --- !u!1001 &2957478662636385365
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -957,7 +954,7 @@ PrefabInstance:
     - target: {fileID: 8008658081672130483, guid: 90e8c0ae63d13a744a9ebc6924de2de4,
         type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Sword
       objectReference: {fileID: 0}
     - target: {fileID: 8060146862872772816, guid: 90e8c0ae63d13a744a9ebc6924de2de4,
         type: 3}
@@ -1065,12 +1062,6 @@ GameObject:
 --- !u!4 &4719038156551514473 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7527334806384368956, guid: 90e8c0ae63d13a744a9ebc6924de2de4,
-    type: 3}
-  m_PrefabInstance: {fileID: 2957478662636385365}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &3932915564165857508 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 2278705905292489905, guid: 90e8c0ae63d13a744a9ebc6924de2de4,
     type: 3}
   m_PrefabInstance: {fileID: 2957478662636385365}
   m_PrefabAsset: {fileID: 0}

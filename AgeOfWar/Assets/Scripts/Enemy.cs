@@ -9,9 +9,10 @@ public class Enemy : MonoBehaviour
     private Animator animator;
     public bool canMove;
     public bool canAttack;
-    public Attack attack;
+    private Attack attack;
     private float nextAttackTime;
     private float attackRate = 0.9f;
+    public bool shield = false;
 
 
 
@@ -21,6 +22,7 @@ public class Enemy : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         canMove = true;
+        attack = GetComponent<Attack>();
     }
 
     // Update is called once per frame
@@ -35,7 +37,23 @@ public class Enemy : MonoBehaviour
         }
         else if (canAttack && !canMove)
         {
-            Attack();
+            string tagname = gameObject.transform.tag;
+
+            switch (tagname)
+            {
+                case "Sword":
+                    SwordAttack();
+                    break;
+                case "Shield":
+                    ShieldAttack();
+                    break;
+                case "Second":
+                    SecondAttack();
+                    break;
+                case "Player":
+                    Attack();
+                    break;
+            }
             rb.velocity = new Vector2(0f, rb.velocity.y); // trigger la box collider de l'ennemie
         }
         else if (!canAttack && !canMove)
@@ -77,6 +95,87 @@ public class Enemy : MonoBehaviour
 
     private void Attack()
     {
+        float randint = Random.Range(1, 5);
+        if (Time.time >= nextAttackTime)
+        {
+            switch (randint)
+            {
+                case 1:
+                    attack.AttackAlly();
+                    animator.SetTrigger("punch");
+                    break;
+                case 2:
+                    attack.AttackAlly();
+                    animator.SetTrigger("punch2");
+                    break;
+                case 3:
+                    attack.AttackAlly(2);
+                    animator.SetTrigger("kick");
+                    break;
+                case 4:
+                    attack.AttackAlly(2);
+                    animator.SetTrigger("kick2");
+                    break;
+            }
+
+            nextAttackTime = Time.time + 1f / attackRate;
+        }
+    }
+    private void ShieldAttack()
+    {
+        float randint = Random.Range(1, 3);
+        if (Time.time >= nextAttackTime)
+        {
+            switch (randint)
+            {
+                case 1:
+                    shield = true;
+                    animator.SetTrigger("Shield");
+                    Invoke("SetShield", 1f);
+                    break;
+                case 2:
+                    attack.AttackAlly();
+                    animator.SetTrigger("AttackMH1");
+                    break;
+                case 3:
+                    attack.AttackAlly();
+                    animator.SetTrigger("AttackMH2");
+                    break;
+                case 4:
+                    attack.AttackAlly();
+                    animator.SetTrigger("AttackMH3");
+                    break;
+            }
+
+            nextAttackTime = Time.time + 1f / attackRate;
+        }
+    }
+    private void SecondAttack()
+    {
+        float randint = Random.Range(1, 4);
+        if (Time.time >= nextAttackTime)
+        {
+            switch (randint)
+            {
+                case 1:
+                    attack.AttackAlly();
+                    animator.SetTrigger("AttackBH1");
+                    break;
+                case 2:
+                    attack.AttackAlly();
+                    animator.SetTrigger("AttackBH2");
+                    break;
+                case 3:
+                    attack.AttackAlly();
+                    animator.SetTrigger("AttackBH3");
+                    break;
+            }
+
+            nextAttackTime = Time.time + 1f / attackRate;
+        }
+    }
+    private void SwordAttack()
+    {
         float randint = Random.Range(1, 4);
         if (Time.time >= nextAttackTime)
         {
@@ -98,6 +197,11 @@ public class Enemy : MonoBehaviour
 
             nextAttackTime = Time.time + 1f / attackRate;
         }
+    }
+
+    private void SetShield()
+    {
+        shield = false;
     }
 
 }

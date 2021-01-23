@@ -14658,10 +14658,10 @@ GameObject:
   - component: {fileID: 7122886559797206266}
   - component: {fileID: 7122886559797206267}
   - component: {fileID: 7122886559797206265}
-  - component: {fileID: 2082827103265632933}
+  - component: {fileID: 1853972093597138780}
   m_Layer: 9
   m_Name: 21
-  m_TagString: Player
+  m_TagString: Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15126,8 +15126,7 @@ MonoBehaviour:
   currentHealth: 100
   TextDamage: {fileID: 3209788723291308180, guid: 7454ebc06c961f44ab6721ba43697d8f,
     type: 3}
-  shieldPlayer: {fileID: 0}
---- !u!114 &2082827103265632933
+--- !u!114 &1853972093597138780
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -15136,15 +15135,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 5408916449332050965}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79d9c90443c97c94e9d9dafddb9e87a9, type: 3}
+  m_Script: {fileID: 11500000, guid: a808e4a31c1b2eb458a5b3b1b9a45ed1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 7122886559797206261}
   velocity: 6
-  animator: {fileID: 21813454308215492}
   canMove: 0
   canAttack: 0
-  attack: {fileID: 7122886559797206267}
+  shield: 0
 --- !u!1 &5506748508542506688
 GameObject:
   m_ObjectHideFlags: 0

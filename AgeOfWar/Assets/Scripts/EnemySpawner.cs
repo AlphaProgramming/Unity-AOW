@@ -9,7 +9,7 @@ public class EnemySpawner : MonoBehaviour
     IEnumerator Spawn()
     {
         int randomEnemy = Random.Range(0, level);
-        int randomSecond = Random.Range(1, 10);
+        int randomSecond = Random.Range(3, 15);
         Instantiate(enemies[randomEnemy], transform.position, Quaternion.Euler(0f, 180f, 0f)) ;
         yield return new WaitForSeconds(randomSecond);
         StartCoroutine("Spawn");

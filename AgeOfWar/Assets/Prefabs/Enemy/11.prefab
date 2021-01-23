@@ -1588,7 +1588,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1643937803050156722}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: 9, z: 0}
+  m_LocalPosition: {x: 2, y: 9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1249469116827966426}
@@ -9774,7 +9774,7 @@ GameObject:
   - component: {fileID: -1428061021498751913}
   m_Layer: 8
   m_Name: 11
-  m_TagString: Enemy
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10222,7 +10222,7 @@ MonoBehaviour:
   enemyLayers:
     serializedVersion: 2
     m_Bits: 512
-  attackRange: 1
+  attackRange: 2
   attackDamage: 5
 --- !u!114 &7008008906113073583
 MonoBehaviour:
@@ -10236,10 +10236,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c24e3bd97e7fd574498487f2cb9f6fcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 16
+  velocity: 6
   canMove: 0
   canAttack: 0
-  attack: {fileID: 5033197462369652109}
+  shield: 0
 --- !u!114 &-1428061021498751913
 MonoBehaviour:
   m_ObjectHideFlags: 0

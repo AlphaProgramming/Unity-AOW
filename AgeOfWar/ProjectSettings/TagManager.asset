@@ -10,6 +10,9 @@ TagManager:
   - LeftE
   - RightE
   - Arrow
+  - Shield
+  - Sword
+  - Second
   layers:
   - Default
   - TransparentFX

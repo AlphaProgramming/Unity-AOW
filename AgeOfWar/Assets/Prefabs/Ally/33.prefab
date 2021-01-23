@@ -7555,11 +7555,11 @@ GameObject:
   - component: {fileID: 4147900643048485451}
   - component: {fileID: 4147900643048485493}
   - component: {fileID: 4147900643048485450}
-  - component: {fileID: 4147900643048485449}
   - component: {fileID: 4147900643048485448}
+  - component: {fileID: 3744980968925202813}
   m_Layer: 9
   m_Name: 33
-  m_TagString: Player
+  m_TagString: Second
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8007,26 +8007,8 @@ MonoBehaviour:
   enemyLayers:
     serializedVersion: 2
     m_Bits: 256
-  attackRange: 1
+  attackRange: 2
   attackDamage: 10
---- !u!114 &4147900643048485449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2549091610802632664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd05f266c13093e4e822e39c0e3023a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 4147900643048485451}
-  velocity: 6
-  animator: {fileID: 881572130071229247}
-  canMove: 0
-  canAttack: 0
-  attack: {fileID: 4147900643048485450}
 --- !u!114 &4147900643048485448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8042,7 +8024,22 @@ MonoBehaviour:
   currentHealth: 100
   TextDamage: {fileID: 3209788723291308180, guid: 7454ebc06c961f44ab6721ba43697d8f,
     type: 3}
-  shieldPlayer: {fileID: 0}
+--- !u!114 &3744980968925202813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2549091610802632664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a808e4a31c1b2eb458a5b3b1b9a45ed1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: 6
+  canMove: 0
+  canAttack: 0
+  shield: 0
 --- !u!1 &2597302593081303405
 GameObject:
   m_ObjectHideFlags: 0

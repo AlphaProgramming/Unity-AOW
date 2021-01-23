@@ -30,7 +30,7 @@ MonoBehaviour:
   velocity: 6
   canMove: 0
   canAttack: 0
-  attack: {fileID: 1037093984860965300}
+  shield: 0
 --- !u!1001 &1037093985299467704
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55,6 +55,10 @@ PrefabInstance:
       value: RightE
       objectReference: {fileID: 0}
     - target: {fileID: 640484364, guid: 7d8b41807444fed4c95d11e004d4843d, type: 3}
+      propertyPath: attackRange
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640484364, guid: 7d8b41807444fed4c95d11e004d4843d, type: 3}
       propertyPath: attackDamage
       value: 10
       objectReference: {fileID: 0}
@@ -65,6 +69,10 @@ PrefabInstance:
     - target: {fileID: 1785048609, guid: 7d8b41807444fed4c95d11e004d4843d, type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1785048610, guid: 7d8b41807444fed4c95d11e004d4843d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 28329568720316818, guid: 7d8b41807444fed4c95d11e004d4843d,
         type: 3}
@@ -824,7 +832,7 @@ PrefabInstance:
     - target: {fileID: 8709830053095067124, guid: 7d8b41807444fed4c95d11e004d4843d,
         type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: Sword
       objectReference: {fileID: 0}
     - target: {fileID: 8733893259610816967, guid: 7d8b41807444fed4c95d11e004d4843d,
         type: 3}
@@ -874,6 +882,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 640484365, guid: 7d8b41807444fed4c95d11e004d4843d, type: 3}
     - {fileID: 1092507586094947384, guid: 7d8b41807444fed4c95d11e004d4843d, type: 3}
+    - {fileID: 5439051440086946999, guid: 7d8b41807444fed4c95d11e004d4843d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7d8b41807444fed4c95d11e004d4843d, type: 3}
 --- !u!1 &8555703725211566156 stripped
 GameObject:
@@ -881,15 +890,3 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1037093985299467704}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1037093984860965300 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 640484364, guid: 7d8b41807444fed4c95d11e004d4843d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1037093985299467704}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8555703725211566156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 456d24e5008e1eb47966708ebfc080db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

@@ -6918,7 +6918,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1891478280759292330}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.67, y: 9.35, z: 0}
+  m_LocalPosition: {x: 2, y: 9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6136212920780249604}
@@ -15808,7 +15808,7 @@ GameObject:
   - component: {fileID: 1891478281536176709}
   m_Layer: 8
   m_Name: 53
-  m_TagString: Enemy
+  m_TagString: Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16256,7 +16256,7 @@ MonoBehaviour:
   enemyLayers:
     serializedVersion: 2
     m_Bits: 512
-  attackRange: 1
+  attackRange: 2
   attackDamage: 10
 --- !u!114 &1891478281536176708
 MonoBehaviour:
@@ -16288,7 +16288,7 @@ MonoBehaviour:
   velocity: 6
   canMove: 0
   canAttack: 0
-  attack: {fileID: 1891478281536176711}
+  shield: 0
 --- !u!1 &6704949439049438431
 GameObject:
   m_ObjectHideFlags: 0

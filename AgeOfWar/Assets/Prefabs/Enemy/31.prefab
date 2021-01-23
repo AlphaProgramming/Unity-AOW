@@ -16858,7 +16858,7 @@ GameObject:
   - component: {fileID: 8930463035689824333}
   m_Layer: 8
   m_Name: 31
-  m_TagString: Enemy
+  m_TagString: Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17306,7 +17306,7 @@ MonoBehaviour:
   velocity: 6
   canMove: 0
   canAttack: 0
-  attack: {fileID: 8930463035689824335}
+  shield: 0
 --- !u!114 &8930463035689824335
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,8 +10,8 @@ public class PlayerHealth : MonoBehaviour
     private bool isDead;
     public GameObject TextDamage;
     private BoxCollider2D[] triggers;
-    public ShieldPlayer shieldPlayer;
     private bool haveShield;
+    private Player player;
 
     // Start is called before the first frame update
     void Start()
@@ -20,21 +20,12 @@ public class PlayerHealth : MonoBehaviour
         isDead = false;
         triggers = GetComponentsInChildren<BoxCollider2D>();
         animator = GetComponent<Animator>();
-        if (GetComponent<ShieldPlayer>() != null)
-        {
-            shieldPlayer = GetComponent<ShieldPlayer>();
-            haveShield = true;
-        }
-        else
-        {
-            Destroy(shieldPlayer);
-            haveShield = false;
-        }
+        player = GetComponent<Player>();
     }
 
     public void TakeDamage(float damage)
     {
-        if (haveShield && shieldPlayer.shield)
+        if (player.shield)
         {
             damage -= damage;
             animator.SetTrigger("ShieldBlock");
@@ -89,6 +80,8 @@ public class PlayerHealth : MonoBehaviour
             theText.color = color3;
             theText.text = damage.ToString();
         }
+        Destroy(tempTextBox,0.5f);
+        Destroy(theText,0.5f);
     }
     private void DisableTriggers()
     {
