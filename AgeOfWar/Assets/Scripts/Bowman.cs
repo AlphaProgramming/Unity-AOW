@@ -10,7 +10,7 @@ public class Bowman : MonoBehaviour
     private bool canMove;
     private bool canAttack;
     private float nextAttackTime;
-    private float attackRate = 1f;
+    private float attackRate = 0.5f;
     public BowmanAttack bowmanAttack;
     public GameObject arrow;
     public float launchForce;
@@ -23,6 +23,7 @@ public class Bowman : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         canMove = true;
+        shotPoint = transform.Find("ShotPoint");
     }
 
     // Update is called once per frame
@@ -69,15 +70,17 @@ public class Bowman : MonoBehaviour
         animator.SetBool("shotArrow", false);
         if (Time.time >= nextAttackTime)
         {
-            animator.SetBool("shotArrow", true);
-            Shoot();
             nextAttackTime = Time.time + 1f / attackRate;
+            animator.SetBool("shotArrow", true);
+            StartCoroutine("Shoot");
+
         }
     }
 
-    private void Shoot()
+    IEnumerator Shoot()
     {
-        GameObject newArrow = Instantiate(arrow, shotPoint.position, shotPoint.rotation);
+        yield return new WaitForSeconds(0.54f);
+        GameObject newArrow = Instantiate(arrow, shotPoint.position, Quaternion.Euler(0f,0f,-90f));
         newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * launchForce;
     }
 }
