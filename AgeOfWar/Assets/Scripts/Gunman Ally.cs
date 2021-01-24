@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bowman : MonoBehaviour
+public class GunmanAlly : MonoBehaviour
 {
     private Rigidbody2D rb;
     public float velocity = 6f;
@@ -11,8 +11,6 @@ public class Bowman : MonoBehaviour
     public bool canAttack;
     private float nextAttackTime;
     private float attackRate = 0.9f;
-    public GameObject arrow;
-    public float launchForce;
     private Transform shotPoint;
 
     // Start is called before the first frame update
@@ -24,8 +22,7 @@ public class Bowman : MonoBehaviour
         shotPoint = transform.Find("ShotPoint");
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         animator.SetFloat("velocity", rb.velocity.x); //animation qui s'adapte avec la vitesse de marche du perso
 
@@ -35,7 +32,7 @@ public class Bowman : MonoBehaviour
         }
         else if (canAttack && !canMove)
         {
-            BowAttack();
+            GunAttack();
             rb.velocity = new Vector2(0f, rb.velocity.y); // trigger la box collider de l'ennemie
         }
         else if (!canAttack && !canMove)
@@ -76,32 +73,26 @@ public class Bowman : MonoBehaviour
         //    canMove = true;
         //}
     }
-    private void BowAttack()
+
+    private void GunAttack()
     {
         int i = 2;
-        animator.SetBool("shotArrow", false);
         if (Time.time >= nextAttackTime)
         {
             nextAttackTime = Time.time + 1f / attackRate;
-            animator.SetBool("shotArrow", true);
             if (i % 2 == 0)
             {
-                StartCoroutine("Shoot");
-                nextAttackTime += 0.8f;
+                animator.SetTrigger("shotMainHand");
             }
             else
             {
-                StartCoroutine("Shoot");
+                animator.SetTrigger("shotOffHand");
             }
+            nextAttackTime += 0.8f;
             i++;
 
         }
     }
 
-    IEnumerator Shoot()
-    {
-        yield return new WaitForSeconds(0.54f);
-        GameObject newArrow = Instantiate(arrow, shotPoint.position, Quaternion.Euler(0f, 0f, -90f));
-        newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * launchForce;
-    }
+
 }
