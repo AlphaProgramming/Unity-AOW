@@ -10,6 +10,8 @@ public class EnemyHealth : MonoBehaviour
     private bool isDead;
     public GameObject TextDamage;
     private BoxCollider2D[] triggers;
+    private Enemy enemy;
+    public GameObject particle;
 
     // Start is called before the first frame update
     void Start()
@@ -18,10 +20,19 @@ public class EnemyHealth : MonoBehaviour
         isDead = false;
         triggers = GetComponentsInChildren<BoxCollider2D>();
         animator = GetComponent<Animator>();
+        enemy = GetComponent<Enemy>();
     }
 
     public void TakeDamage(float damage)
     {
+        Vector2 pos = transform.position;
+        pos.y = 8;
+        GameObject blood = Instantiate(particle, pos, Quaternion.identity);
+        if (enemy.shield)
+        {
+            damage -= damage;
+            animator.SetTrigger("ShieldBlock");
+        }
         currentHealth -= damage;
         MakeTextDamage(damage);
         if(currentHealth <= 0)
