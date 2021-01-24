@@ -2,16 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Arrow : MonoBehaviour
+public class ArrowAlly : MonoBehaviour
 {
     Rigidbody2D rb;
     bool hasHit;
     PolygonCollider2D bc;
+    private Attack attack;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         bc = GetComponent<PolygonCollider2D>();
+        attack = GetComponent<Attack>();
     }
 
     // Update is called once per frame
@@ -22,12 +24,6 @@ public class Arrow : MonoBehaviour
             Vector2 direction = rb.velocity;
             float angle = Mathf.Atan2(rb.velocity.y, rb.velocity.x) * Mathf.Rad2Deg;
         }
-        else
-        {
-
-            Destroy(this.bc);
-            Destroy(this.gameObject,0.1f);
-        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -35,5 +31,8 @@ public class Arrow : MonoBehaviour
         hasHit = true;
         rb.velocity = Vector2.zero;
         rb.isKinematic = true;
+        attack.AttackOpponent();
+        Destroy(this.bc);
+        Destroy(this.gameObject, 0.1f);
     }
 }

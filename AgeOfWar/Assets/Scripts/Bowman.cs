@@ -15,8 +15,6 @@ public class Bowman : MonoBehaviour
     public float launchForce;
     private Transform shotPoint;
 
-    private Attack attack;
-
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +22,6 @@ public class Bowman : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         canMove = true;
-        attack = GetComponent<Attack>();
         shotPoint = transform.Find("ShotPoint");
     }
 
