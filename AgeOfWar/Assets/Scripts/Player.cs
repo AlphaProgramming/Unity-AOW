@@ -51,6 +51,9 @@ public class Player : MonoBehaviour
                 case "Player":
                     Attack();
                     break;
+                case "TwoHanded":
+                    TwoHandedAttack();
+                    break;
             }
             rb.velocity = new Vector2(0f, rb.velocity.y); // trigger la box collider de l'ennemie
         }
@@ -197,7 +200,10 @@ public class Player : MonoBehaviour
             nextAttackTime = Time.time + 1f / attackRate;
         }
     }
+    private void TwoHandedAttack()
+    {
 
+    }
     private void SetShield()
     {
         shield = false;
