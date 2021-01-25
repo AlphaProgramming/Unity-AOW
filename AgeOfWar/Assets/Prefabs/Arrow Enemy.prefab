@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 148820721092608051}
   - component: {fileID: 5974169464919970786}
   - component: {fileID: 3122498674584664202}
-  - component: {fileID: 6678783080925220332}
-  m_Layer: 10
-  m_Name: Arrow 1 1 1
+  - component: {fileID: -6540358110878199302}
+  - component: {fileID: 273251675948353753}
+  m_Layer: 11
+  m_Name: Arrow Enemy
   m_TagString: Arrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -164,7 +165,7 @@ PolygonCollider2D:
       - {x: 0.25703907, y: -2.3885188}
       - {x: 0.2106123, y: -2.3856697}
       - {x: 0.09893953, y: -2.276621}
---- !u!114 &6678783080925220332
+--- !u!114 &-6540358110878199302
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -173,7 +174,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 3739649441400738267}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1956604701d4ea40a0f3306a6d7cbd9, type: 3}
+  m_Script: {fileID: 11500000, guid: 456d24e5008e1eb47966708ebfc080db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 512
+  attackRange: 2
+  attackDamage: 10
+--- !u!114 &273251675948353753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3739649441400738267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab99dc285f3ea134290531b1a378cd94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8290663838876801629
@@ -185,7 +203,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3637598957260812031}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: AttackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
