@@ -15,16 +15,12 @@ public class Bowman : MonoBehaviour
     public float launchForce;
     private Transform shotPoint;
 
-    private Attack attack;
-
-
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         canMove = true;
-        attack = GetComponent<Attack>();
         shotPoint = transform.Find("ShotPoint");
     }
 
@@ -82,21 +78,29 @@ public class Bowman : MonoBehaviour
     }
     private void BowAttack()
     {
-        int i = 1;
+        int i = 2;
         animator.SetBool("shotArrow", false);
         if (Time.time >= nextAttackTime)
         {
             nextAttackTime = Time.time + 1f / attackRate;
             animator.SetBool("shotArrow", true);
-            StartCoroutine("Shoot");
-
+            if (i % 2 == 0)
+            {
+                StartCoroutine("Shoot");
+                nextAttackTime += 0.8f;
+            }
+            else
+            {
+                StartCoroutine("Shoot");
+            }
+            i++;
 
         }
     }
 
     IEnumerator Shoot()
     {
-        yield return new WaitForSeconds(0.54f);
+        yield return new WaitForSeconds(1f);
         GameObject newArrow = Instantiate(arrow, shotPoint.position, Quaternion.Euler(0f, 0f, -90f));
         newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * launchForce;
     }

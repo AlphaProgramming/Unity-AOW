@@ -12,6 +12,7 @@ public class PlayerHealth : MonoBehaviour
     private BoxCollider2D[] triggers;
     private bool haveShield;
     private Player player;
+    public GameObject particle;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,10 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        Vector2 pos = transform.position;
+        pos.y = 8;
+        GameObject blood = Instantiate(particle, pos, Quaternion.identity);
+
         if (player.shield)
         {
             damage -= damage;
