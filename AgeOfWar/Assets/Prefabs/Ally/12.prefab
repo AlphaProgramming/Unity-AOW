@@ -8308,6 +8308,7 @@ MonoBehaviour:
   currentHealth: 100
   TextDamage: {fileID: 3209788723291308180, guid: 7454ebc06c961f44ab6721ba43697d8f,
     type: 3}
+  particle: {fileID: 1993168194859322, guid: 7ee24f5088beea747ab26b288a0e529e, type: 3}
 --- !u!1 &3279977918661626446
 GameObject:
   m_ObjectHideFlags: 0

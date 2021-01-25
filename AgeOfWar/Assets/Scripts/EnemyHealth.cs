@@ -27,14 +27,19 @@ public class EnemyHealth : MonoBehaviour
     {
         Vector2 pos = transform.position;
         pos.y = 8;
-        GameObject blood = Instantiate(particle, pos, Quaternion.identity);
+        
         if (enemy.shield)
         {
             damage -= damage;
             animator.SetTrigger("ShieldBlock");
         }
-        currentHealth -= damage;
-        MakeTextDamage(damage);
+        else
+        {
+            GameObject blood = Instantiate(particle, pos, Quaternion.identity);
+            currentHealth -= damage;
+            MakeTextDamage(damage);
+            Destroy(blood, 0.6f);
+        }
         if(currentHealth <= 0)
         {
             Die();

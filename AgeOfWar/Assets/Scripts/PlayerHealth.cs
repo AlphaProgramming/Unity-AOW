@@ -28,16 +28,19 @@ public class PlayerHealth : MonoBehaviour
     {
         Vector2 pos = transform.position;
         pos.y = 8;
-        GameObject blood = Instantiate(particle, pos, Quaternion.identity);
 
         if (player.shield)
         {
             damage -= damage;
             animator.SetTrigger("ShieldBlock");
         }
-        currentHealth -= damage;
-        MakeTextDamage(damage);
-        Debug.Log(currentHealth);
+        else
+        {
+            GameObject blood = Instantiate(particle, pos, Quaternion.identity);
+            currentHealth -= damage;
+            MakeTextDamage(damage);
+            Destroy(blood, 0.6f);
+        }
         if (currentHealth <= 0)
         {
             Die();
@@ -66,24 +69,24 @@ public class PlayerHealth : MonoBehaviour
         GameObject tempTextBox = (GameObject)Instantiate(TextDamage, pos, Quaternion.identity);
         TextMesh theText = tempTextBox.transform.GetComponent<TextMesh>();
 
-
         Color color1 = new Color(96, 0, 0);
         Color color2 = new Color(255, 96, 0);
         Color color3 = new Color(255, 0, 0);
+
         if (damage < 33)
         {
             theText.color = color1;
-            theText.text = damage.ToString();
+            theText.text = "-" + damage.ToString();
         }
         else if (damage > 33 && damage < 66)
         {
             theText.color = color2;
-            theText.text = damage.ToString();
+            theText.text = "-" + damage.ToString();
         }
         else
         {
             theText.color = color3;
-            theText.text = damage.ToString();
+            theText.text = "-" + damage.ToString();
         }
         Destroy(tempTextBox,0.5f);
         Destroy(theText,0.5f);
