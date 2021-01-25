@@ -100,7 +100,7 @@ public class Bowman : MonoBehaviour
 
     IEnumerator Shoot()
     {
-        yield return new WaitForSeconds(0.54f);
+        yield return new WaitForSeconds(1f);
         GameObject newArrow = Instantiate(arrow, shotPoint.position, Quaternion.Euler(0f, 0f, -90f));
         newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * launchForce;
     }
