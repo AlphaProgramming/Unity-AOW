@@ -13,6 +13,7 @@ TagManager:
   - Shield
   - Sword
   - Second
+  - TwoHanded
   layers:
   - Default
   - TransparentFX

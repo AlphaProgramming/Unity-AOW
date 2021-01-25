@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Player : MonoBehaviour
 {
@@ -33,7 +31,7 @@ public class Player : MonoBehaviour
         {
             rb.velocity = new Vector2(velocity, rb.velocity.y); // avance jusqu'au prochain ennemie/allié
         }
-        else if(canAttack && !canMove)
+        else if (canAttack && !canMove)
         {
             string tagname = gameObject.transform.tag;
 
@@ -202,7 +200,27 @@ public class Player : MonoBehaviour
     }
     private void TwoHandedAttack()
     {
+        float randint = Random.Range(1, 4);
+        if (Time.time >= nextAttackTime)
+        {
+            switch (randint)
+            {
+                case 1:
+                    attack.AttackOpponent();
+                    animator.SetTrigger("TwoHanded1");
+                    break;
+                case 2:
+                    attack.AttackOpponent();
+                    animator.SetTrigger("TwoHanded2");
+                    break;
+                case 3:
+                    attack.AttackOpponent();
+                    animator.SetTrigger("TwoHanded3");
+                    break;
+            }
 
+            nextAttackTime = Time.time + 1f / attackRate;
+        }
     }
     private void SetShield()
     {
