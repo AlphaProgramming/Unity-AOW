@@ -29,6 +29,7 @@ public class PlayerHealth : MonoBehaviour
         Vector2 pos = transform.position;
         pos.y = 8;
         GameObject blood = Instantiate(particle, pos, Quaternion.identity);
+        Destroy(blood, 1f);
 
         if (player.shield)
         {

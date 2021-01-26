@@ -17337,9 +17337,6 @@ GameObject:
   - component: {fileID: 6408844470410399540}
   - component: {fileID: 6408844470410399542}
   - component: {fileID: 8522762881798524677}
-  - component: {fileID: -3530702010972509643}
-  - component: {fileID: -4569687432317567196}
-  - component: {fileID: 8596703240078151067}
   m_Layer: 9
   m_Name: 61
   m_TagString: Shield
@@ -17824,54 +17821,6 @@ MonoBehaviour:
   canMove: 0
   canAttack: 0
   shield: 0
---- !u!114 &-3530702010972509643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8369335292902212449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 456d24e5008e1eb47966708ebfc080db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  attackRange: 5
-  attackDamage: 10
---- !u!114 &-4569687432317567196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8369335292902212449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a808e4a31c1b2eb458a5b3b1b9a45ed1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocity: 6
-  canMove: 0
-  canAttack: 0
-  shield: 0
---- !u!114 &8596703240078151067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8369335292902212449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29e04689df819de419fa3b0d129ade60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentHealth: 0
-  TextDamage: {fileID: 0}
-  particle: {fileID: 0}
 --- !u!1 &8520010339450448065
 GameObject:
   m_ObjectHideFlags: 0

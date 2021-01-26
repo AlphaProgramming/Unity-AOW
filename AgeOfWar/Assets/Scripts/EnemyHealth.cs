@@ -28,6 +28,8 @@ public class EnemyHealth : MonoBehaviour
         Vector2 pos = transform.position;
         pos.y = 8;
         GameObject blood = Instantiate(particle, pos, Quaternion.identity);
+        Destroy(blood);
+
         if (enemy.shield)
         {
             damage -= damage;

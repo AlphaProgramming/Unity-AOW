@@ -16178,7 +16178,7 @@ GameObject:
   - component: {fileID: 4757962055987799770}
   m_Layer: 9
   m_Name: 73
-  m_TagString: Untagged
+  m_TagString: Shield
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16544,7 +16544,7 @@ SortingGroup:
   m_Enabled: 1
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
 --- !u!95 &3614750311778848357
 Animator:
   serializedVersion: 3
@@ -16633,7 +16633,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &4757962055987799770
 BoxCollider2D:
   m_ObjectHideFlags: 0
