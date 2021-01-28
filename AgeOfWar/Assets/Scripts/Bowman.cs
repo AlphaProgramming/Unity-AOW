@@ -9,11 +9,14 @@ public class Bowman : MonoBehaviour
     private Animator animator;
     public bool canMove;
     public bool canAttack;
+    public bool canKick;
     private float nextAttackTime;
     private float attackRate = 0.9f;
     public GameObject arrow;
     public float launchForce;
     private Transform shotPoint;
+    private BoxCollider2D shotRange;
+    private BoxCollider2D kickRange;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +25,8 @@ public class Bowman : MonoBehaviour
         animator = GetComponent<Animator>();
         canMove = true;
         shotPoint = transform.Find("ShotPoint");
+        shotRange = transform.Find("BowmanRange").GetComponent<BoxCollider2D>();
+        kickRange = transform.Find("Right").GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
@@ -29,52 +34,65 @@ public class Bowman : MonoBehaviour
     {
         float characterVelocity = Mathf.Abs(rb.velocity.x);
         animator.SetFloat("velocity", characterVelocity);
-        if (canMove)
+        if (canMove) // avance jusqu'au prochain ennemie/allié
         {
-            rb.velocity = new Vector2(velocity, rb.velocity.y); // avance jusqu'au prochain ennemie/allié
+            rb.velocity = new Vector2(velocity, rb.velocity.y);
         }
-        else if (canAttack && !canMove)
+        else if (canKick)//trigger la box collider d'un ennemi au cac
+        {
+            Kick();
+            rb.velocity = new Vector2(0f, rb.velocity.y);
+        }
+        else if (canAttack)//trigger la box collider d'un ennemi en étant derrière un allié
         {
             BowAttack();
-            rb.velocity = new Vector2(0f, rb.velocity.y); // trigger la box collider de l'ennemie
+            rb.velocity = new Vector2(0f, rb.velocity.y);
         }
-        else if (!canAttack && !canMove)
+        else if (!canAttack && !canMove && !canKick)// trigger la box collider d'un allié (sans qu'il y ait d'ennemi)
         {
-            rb.velocity = new Vector2(0f, rb.velocity.y);// trigger la box collider d'un allié
-        }
-        else if (!canAttack && canMove)
-        {
-            rb.velocity = new Vector2(velocity, rb.velocity.y);// untrigger la box collider d'un allié
+            rb.velocity = new Vector2(0f, rb.velocity.y);
         }
 
     }
 
     void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.transform.tag == "LeftE") // il s'arrête de marcher et attaque
+        if (shotRange.CompareTag("LeftE") && kickRange.CompareTag("Left"))
         {
             canAttack = true;
+            canKick = false;
             canMove = false;
         }
-        //else if (collision.gameObject.transform.tag == "Left") // il s'arrête de marcher 
-        //{
-        //    canMove = false;
-        //    canAttack = false;
-        //}
+        else if (kickRange.CompareTag("LeftE"))
+        {
+            canAttack = false;
+            canKick = true;
+            canMove = false;
+        }
+        else if (kickRange.CompareTag("Left"))
+        {
+            canMove = false;
+            canAttack = false;
+            canKick = false;
+        }
 
     }
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.transform.tag == "LeftE") // il se remet à marcher dès qu'il trigger pas de collider d'un enemy
+        if (shotRange.CompareTag("LeftE"))
         {
             canAttack = false;
+        }
+        else if (kickRange.CompareTag("Left"))
+        {
             canMove = true;
         }
-        //else if (collision.gameObject.transform.tag == "Left") // il s'arrête d'attaquer et marque
-        //{
-        //    canMove = true;
-        //}
+        else if (kickRange.CompareTag("LeftE"))
+        {
+            canMove = true;
+            canKick = false;
+        }
     }
     private void BowAttack()
     {
@@ -112,6 +130,11 @@ public class Bowman : MonoBehaviour
             i++;
 
         }
+    }
+
+    private void Kick()
+    {
+
     }
 
     IEnumerator ShootAlly()

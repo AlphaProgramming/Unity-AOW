@@ -77,12 +77,17 @@ public class GunmanAlly : MonoBehaviour
     private void GunAttack()
     {
         int i = 2;
+        animator.SetTrigger("shotGun");
         if (Time.time >= nextAttackTime)
         {
             nextAttackTime = Time.time + 1f / attackRate;
-            if (i % 2 == 0)
+            if (i % 2 == 0 && i %3 != 0)
             {
                 animator.SetTrigger("shotMainHand");
+            }
+            else if(i%3==0)
+            {
+                animator.SetTrigger("shotBothHands");
             }
             else
             {
