@@ -24,12 +24,6 @@ public class ArrowEnemy : MonoBehaviour
             Vector2 direction = rb.velocity;
             float angle = Mathf.Atan2(rb.velocity.y, rb.velocity.x) * Mathf.Rad2Deg;
         }
-        else
-        {
-            attack.AttackAlly();
-            Destroy(this.bc);
-            Destroy(this.gameObject, 0.1f);
-        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -37,5 +31,8 @@ public class ArrowEnemy : MonoBehaviour
         hasHit = true;
         rb.velocity = Vector2.zero;
         rb.isKinematic = true;
+        attack.AttackAlly();
+        Destroy(this.bc);
+        Destroy(this.gameObject, 0.1f);
     }
 }
