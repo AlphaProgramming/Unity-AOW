@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: ecf1062e785a319478264b12b446ffd5
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Honey
+  fontNames:
+  - Honey
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 084040334053cdd48987c33a280ea39e, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
