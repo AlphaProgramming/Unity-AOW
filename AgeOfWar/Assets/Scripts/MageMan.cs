@@ -89,7 +89,7 @@ public class MageMan : MonoBehaviour
     IEnumerator Shoot()
     {
         yield return new WaitForSeconds(1.15f);
-        GameObject newArrow = Instantiate(mageBall, shotPoint.position, Quaternion.Euler(0f, 0f, 0f));
-        newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * launchForce;
+        GameObject newBall = Instantiate(mageBall, shotPoint.position, Quaternion.Euler(0f, 0f, 0f));
+        newBall.GetComponent<Rigidbody2D>().velocity = transform.right * launchForce;
     }
 }
