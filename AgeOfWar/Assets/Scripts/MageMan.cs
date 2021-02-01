@@ -12,9 +12,9 @@ public class MageMan : MonoBehaviour
     private float nextAttackTime;
     private float attackRate = 0.9f;
     public GameObject mageBall;
-    public float launchForce;
     private Transform shotPoint;
-
+    public float launchForce;
+    
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -22,7 +22,6 @@ public class MageMan : MonoBehaviour
         canMove = true;
         shotPoint = transform.Find("ShotPoint");
     }
-
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -89,8 +88,8 @@ public class MageMan : MonoBehaviour
 
     IEnumerator Shoot()
     {
-        yield return new WaitForSeconds(1f);
-        GameObject newMageBall = Instantiate(mageBall, shotPoint.position, Quaternion.Euler(0f, 0f, -90f));
-        newMageBall.GetComponent<Rigidbody2D>().velocity = transform.right * launchForce;
+        yield return new WaitForSeconds(1.15f);
+        GameObject newBall = Instantiate(mageBall, shotPoint.position, Quaternion.Euler(0f, 0f, 0f));
+        newBall.GetComponent<Rigidbody2D>().velocity = transform.right * launchForce;
     }
 }
