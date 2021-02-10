@@ -57,6 +57,36 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5749712, y: 2.2970562}
   m_EdgeRadius: 0
+--- !u!1 &369604863
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 369604864}
+  m_Layer: 0
+  m_Name: StormPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &369604864
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369604863}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 32.03, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1926424301436351148}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &747220851
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,7 +189,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 23.076471, y: 0}
+  m_Offset: {x: 14.16318, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -170,7 +200,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 46.222363, y: 1}
+  m_Size: {x: 28.39578, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &841904025
 MonoBehaviour:
@@ -17680,6 +17710,7 @@ Transform:
   - {fileID: 33514214}
   - {fileID: 1549633757}
   - {fileID: 841904023}
+  - {fileID: 369604864}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18110,6 +18141,9 @@ MonoBehaviour:
   canAttack: 0
   mageBall: {fileID: 6189040123421686362, guid: 39ef047e213e4ac44b6fa30599a253dc,
     type: 3}
+  storm: {fileID: 1649785475109378, guid: a5350f55a28129940887e9678f8ef13b, type: 3}
+  mageRange: {fileID: 841904022}
+  stormPoint: {fileID: 369604864}
   launchForce: 30
 --- !u!114 &920821569
 MonoBehaviour:

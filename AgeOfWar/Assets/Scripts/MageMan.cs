@@ -12,9 +12,12 @@ public class MageMan : MonoBehaviour
     private float nextAttackTime;
     private float attackRate = 0.9f;
     public GameObject mageBall;
+    public GameObject storm;
+    public GameObject mageRange;
+    public Transform stormPoint;
     private Transform shotPoint;
     public float launchForce;
-    
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -26,14 +29,13 @@ public class MageMan : MonoBehaviour
     void FixedUpdate()
     {
         animator.SetFloat("velocity", rb.velocity.x); //animation qui s'adapte avec la vitesse de marche du perso
-
         if (canMove)
         {
             rb.velocity = new Vector2(velocity, rb.velocity.y); // avance jusqu'au prochain ennemie/allié
         }
         else if (canAttack && !canMove)
         {
-            FireMageAttack();
+            MageAttack();
             rb.velocity = new Vector2(0f, rb.velocity.y); // trigger la box collider de l'ennemie
         }
         else if (!canAttack && !canMove)
@@ -46,8 +48,8 @@ public class MageMan : MonoBehaviour
         }
 
     }
-        
-    void OnTriggerStay2D(Collider2D collision)
+
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.transform.tag == "LeftE") // il s'arrête de marcher et attaque
         {
@@ -55,7 +57,7 @@ public class MageMan : MonoBehaviour
             canMove = false;
         }
     }
-    
+
     void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.transform.tag == "LeftE") // il se remet à marcher dès qu'il trigger pas de collider d'un enemy
@@ -65,22 +67,35 @@ public class MageMan : MonoBehaviour
         }
     }
 
-    public void FireMageAttack()
+    public void MageAttack()
     {
         int i = 2;
-        animator.SetBool("MageShot", false);
+        var number = Random.Range(1, 5);
+        string anim, attack = "";
+        if (number > 3)
+        {
+            anim = "MageStorm";
+            attack = "Spike";
+        }
+        else
+        {
+            anim = "MageShot";//sinon MageShot
+            attack = "Shoot";
+        }
+
+        animator.SetBool(anim, false);
         if (Time.time >= nextAttackTime)
         {
             nextAttackTime = Time.time + 1f / attackRate;
-            animator.SetBool("MageShot", true);
+            animator.SetBool(anim, true);
             if (i % 2 == 0)
             {
-                StartCoroutine("Shoot");
+                StartCoroutine(attack);
                 nextAttackTime += 0.8f;
             }
             else
             {
-                StartCoroutine("Shoot");
+                StartCoroutine(attack);
             }
             i++;
         }
@@ -91,5 +106,11 @@ public class MageMan : MonoBehaviour
         yield return new WaitForSeconds(1.15f);
         GameObject newBall = Instantiate(mageBall, shotPoint.position, Quaternion.Euler(0f, 0f, 0f));
         newBall.GetComponent<Rigidbody2D>().velocity = transform.right * launchForce;
+    }
+
+    IEnumerator Spike()
+    {
+        yield return new WaitForSeconds(1f);
+        Instantiate(storm, stormPoint.position, Quaternion.Euler(-90f, 0f, 0f));
     }
 }

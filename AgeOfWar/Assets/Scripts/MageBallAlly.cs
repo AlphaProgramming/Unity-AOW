@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MageBallAlly : MonoBehaviour
 {
-    public float projectileSpeed;
     public GameObject impactEffect;
     public CircleCollider2D bc;
     private Rigidbody2D rb;
