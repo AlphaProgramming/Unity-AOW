@@ -12,6 +12,7 @@ public class GunmanAlly : MonoBehaviour
     private float nextAttackTime;
     private float attackRate = 0.9f;
     private Transform shotPoint;
+    private int i = 2;
 
     // Start is called before the first frame update
     void Start()
@@ -76,20 +77,19 @@ public class GunmanAlly : MonoBehaviour
 
     private void GunAttack()
     {
-        int i = 2;
         animator.SetTrigger("shotGun");
         if (Time.time >= nextAttackTime)
         {
             nextAttackTime = Time.time + 1f / attackRate;
-            if (i % 2 == 0 && i %3 != 0)
-            {
-                animator.SetTrigger("shotMainHand");
-            }
-            else if(i%3==0)
+            if (i % 3 == 0)
             {
                 animator.SetTrigger("shotBothHands");
             }
-            else
+            else if (i % 1 == 0)
+            {
+                animator.SetTrigger("shotMainHand");
+            }
+            else if (i % 2 == 0)
             {
                 animator.SetTrigger("shotOffHand");
             }

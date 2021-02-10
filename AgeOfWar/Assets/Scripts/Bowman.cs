@@ -17,6 +17,7 @@ public class Bowman : MonoBehaviour
     private Transform shotPoint;
     private BoxCollider2D shotRange;
     private BoxCollider2D kickRange;
+    private int i = 2;
 
     // Start is called before the first frame update
     void Start()
@@ -96,7 +97,6 @@ public class Bowman : MonoBehaviour
     }
     private void BowAttack()
     {
-        int i = 2;
         animator.SetBool("shotArrow", false);
         if (Time.time >= nextAttackTime)
         {
